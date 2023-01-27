@@ -1,9 +1,8 @@
 import { StatusBar } from 'expo-status-bar'
 import { StyleSheet, Text, View } from 'react-native'
-import ParallaxRender from './Components/ParallaxRender'
-import HomeScreen from './Components/HomeScreen'
+// import ParallaxRender from './Components/ParallaxRender'
+import HomeScreen from './Components/Screens/HomeScreen'
 import { Container } from './Styles/appStyles'
-
 
 export default function App() {
   return (

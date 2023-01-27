@@ -1,6 +1,5 @@
 import styled from "styled-components/native";
 import Constants from "expo-constants";
-import RalewayMedium from '../assets/fonts/Raleway-Medium.ttf'
 
 // Colors
 export const colors = {
