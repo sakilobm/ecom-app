@@ -5,6 +5,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import HomeScreen from './Components/Screens/HomeScreen'
 import { Container } from './Styles/appStyles'
 import { useFonts } from 'expo-font';
+import * as SplashScreen from 'expo-splash-screen';
 import Welcome from './Components/Screens/OnboardingScreen/WelcomeScreen';
 
 export default function App() {

@@ -1,7 +1,6 @@
 // import { TouchableOpacity } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import HomeScreen from './Screens/HomeScreen';
 // import { BottomTabNavigationState } from '@react-navigation/bottom-tabs'
 import { CategoryAll, Category2Screen, Category3Screen, Category4Screen } from './Screens/Category1Screen';
 import { Ionicons } from '@expo/vector-icons';
@@ -10,25 +9,21 @@ import { useState } from 'react';
 const Tab = createMaterialTopTabNavigator();
 
 const CategoryBar = () => {
-    const [showLabel, setShowLabel] = useState(true);
+    const [showLabel, setShowLabel] = useState(false);
     return (
         <NavigationContainer>
+
             <Tab.Navigator screenOptions={{
-                tabBarLabelStyle: { fontSize: 12 },
                 tabBarItemStyle: { width: 100, height: 90, },
                 tabBarStyle: {
                     backgroundColor: '#F7F6F9',
                     borderRadius: 38,
                 },
                 showLabel: showLabel,
-            }} initialRouteName="Home"
+            }} independent={true} initialRouteName="Home"
             >
 
-                <Tab.Screen
-                    name="Home"
-                    component={HomeScreen}
-                    options={{ headerShown: false }}
-                />
+
                 <Tab.Screen
                     name="All"
                     component={CategoryAll}
