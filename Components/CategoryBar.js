@@ -1,33 +1,34 @@
-import { TouchableOpacity } from 'react-native'
+// import { TouchableOpacity } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import HomeScreen from './Screens/HomeScreen';
-import { BottomTabNavigationState } from '@react-navigation/bottom-tabs'
+// import { BottomTabNavigationState } from '@react-navigation/bottom-tabs'
 import { CategoryAll, Category2Screen, Category3Screen, Category4Screen } from './Screens/Category1Screen';
 import { Ionicons } from '@expo/vector-icons';
 import { useState } from 'react';
-import ALLSVG from '../assets/svg/Coffee Cup 2.svg'
+// import ALLSVG from '../assets/svg/Coffee Cup 2.svg'
 const Tab = createMaterialTopTabNavigator();
 
-const CategoryBar = ({ navigation,props }) => {
+const CategoryBar = () => {
     const [showLabel, setShowLabel] = useState(true);
-    const [showIcon, setShowIcon] = useState(true);
-    const { state } = props.navigation;
-    const activeTabIndex = state.index;
-    const activeTabRoute = state.routes[activeTabIndex];
     return (
         <NavigationContainer>
             <Tab.Navigator screenOptions={{
-                header: () => null, tabBarLabelStyle: { fontSize: 12 },
+                tabBarLabelStyle: { fontSize: 12 },
                 tabBarItemStyle: { width: 100, height: 90, },
                 tabBarStyle: {
                     backgroundColor: '#F7F6F9',
                     borderRadius: 38,
                 },
                 showLabel: showLabel,
-                tabBarShowIcon: showIcon
-            }}
+            }} initialRouteName="Home"
             >
+
+                <Tab.Screen
+                    name="Home"
+                    component={HomeScreen}
+                    options={{ headerShown: false }}
+                />
                 <Tab.Screen
                     name="All"
                     component={CategoryAll}
@@ -38,21 +39,8 @@ const CategoryBar = ({ navigation,props }) => {
                         tabBarIcon: ({ tintColor }) => (
                             <Ionicons size={25} name="layers-outline" color="#DBBF2E" ></Ionicons>
                         ),
-                        tabBarOnPress: () => setShowLabel(!showLabel) && setShowIcon(!showIcon),
+                        tabBarOnPress: () => setShowLabel(!showLabel),
                     }} />
-                <View>
-                    {props.state.routes.map((route, index) => {
-                        const color = index === activeTabIndex ? 'red' : 'black';
-                        return (
-                            <TouchableOpacity
-                                key={route.key}
-                                onPress={() => navigation.navigate(route.name)}
-                            >
-                                <Text style={{ color }}>{route.name}</Text>
-                            </TouchableOpacity>
-                        );
-                    })}
-                </View>
                 <Tab.Screen
                     name="Mugs"
                     component={Category2Screen}

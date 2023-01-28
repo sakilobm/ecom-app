@@ -4,34 +4,20 @@ import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import Svg, { Path, Rect } from 'react-native-svg';
 import CategoryBar from '../CategoryBar';
+import { FontFamily } from "../GlobalStyles";
 // import CustomTabBar from '../CustomTabBar';
-
 
 SplashScreen.preventAutoHideAsync();
 
 const HomeScreen = () => {
-    const [fontsLoaded] = useFonts({
-        'Raleway-Medium': require('../../assets/fonts/Raleway-Medium.ttf'),
-        'Raleway-Bold': require('../../assets/fonts/Raleway-Bold.ttf'),
-    });
-
-    const onLayoutRootView = useCallback(async () => {
-        if (fontsLoaded) {
-            await SplashScreen.hideAsync();
-        }
-    }, [fontsLoaded]);
-
-    if (!fontsLoaded) {
-        return null;
-    }
     return (
-        <View style={styles.container} onLayout={onLayoutRootView} >
+        <View style={styles.container}>
             <View style={styles.header} >
                 <Text style={styles.watermark}>
                     Order From The
                     Best Of
                 </Text>
-                //TODO: Title Should be Run Dynamicly Rendered
+                {/* //TODO: Title Should be Run Dynamicly Rendered */}
                 <Text style={styles.mugsTitle}>Mugs</Text>
                 <TouchableOpacity style={styles.svgCont}>
                     <Svg width="69" height="95" viewBox="0 0 69 95" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,7 +43,7 @@ const styles = StyleSheet.create({
         left: 30,
         fontSize: 30,
         color: 'black',
-        fontFamily: 'Raleway-Medium',
+        fontFamily: FontFamily.raleway,
     },
     header: {
         top: 15,
