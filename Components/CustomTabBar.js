@@ -4,7 +4,6 @@ import { TouchableOpacity } from 'react-native';
 import { StyleSheet, Text, View } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import HomeScreen from './Screens/HomeScreen'; import { Ionicons } from '@expo/vector-icons';
 import { CategoryAll, Category2Screen, Category3Screen, Category4Screen } from '../Components/Screens/Category1Screen';
 const Tab = createMaterialTopTabNavigator();
 const CustomTabBar = props => {
@@ -93,10 +92,10 @@ const CustomTabBar = props => {
 //     );
 // }
 
-<Tab.Navigator tabBar={CustomTabBar}>
+{/* <Tab.Navigator tabBar={CustomTabBar}>
     <Tab.Screen name="Home" component={CategoryAll} />
     <Tab.Screen name="Profile" component={Category2Screen} />
     <Tab.Screen name="Settings" component={Category3Screen} />
 </Tab.Navigator>
 
-export default CustomTabBar;
+export default CustomTabBar; */}

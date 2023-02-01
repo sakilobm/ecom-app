@@ -12,7 +12,6 @@ const CategoryBar = () => {
     const [showLabel, setShowLabel] = useState(false);
     return (
         <NavigationContainer>
-
             <Tab.Navigator screenOptions={{
                 tabBarItemStyle: { width: 100, height: 90, },
                 tabBarStyle: {
@@ -22,7 +21,6 @@ const CategoryBar = () => {
                 showLabel: showLabel,
             }} independent={true} initialRouteName="Home"
             >
-
 
                 <Tab.Screen
                     name="All"

@@ -1,12 +1,10 @@
 import { StatusBar } from 'expo-status-bar'
 import React, { useCallback } from 'react';
-import { StyleSheet, Text, View } from 'react-native'
 // import ParallaxRender from './Components/ParallaxRender'
 import HomeScreen from './Components/Screens/HomeScreen'
 import { Container } from './Styles/appStyles'
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
-import Welcome from './Components/Screens/OnboardingScreen/WelcomeScreen';
 
 export default function App() {
   //Auto Font Loader
@@ -36,7 +34,6 @@ export default function App() {
     <Container onLayout={onLayoutRootView} >
       <StatusBar style="auto" />
       <HomeScreen/>
-      {/* <Welcome /> */}
     </Container>
   );
 }

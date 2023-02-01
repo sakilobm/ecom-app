@@ -2,6 +2,8 @@
 export const FontFamily = {
     rocknRollOne: "RocknRoll One",
     raleway: "Raleway",
+    ralewayMedium: "Raleway-Medium",
+    ralewayBold: "Raleway-Bold",
     urbanist: "Urbanist",
     dMSans: "DM Sans",
     ruslanDisplay: "Ruslan Display",
@@ -56,40 +58,3 @@ export const FontFamily = {
     steelblue_200: "#0085af",
     khaki: "#ffec89",
   };
-  /* Paddings */
-  export const Padding = {
-    p_sm: 2,
-    p_md: 7,
-    p_lg: 7,
-  };
-  /* Margins */
-  export const Margin = {
-    m_2xs: -17,
-    m_xs: 0,
-    m_sm: 5,
-    m_md: 16,
-    m_lg: 23,
-    m_xl: 31,
-    m_2xl: 47,
-  };
-  /* border radiuses */
-  export const Border = {
-    br_7xs: 14,
-    br_6xs: 15,
-    br_5xs: 20,
-    br_4xs: 23,
-    br_3xs: 27,
-    br_2xs: 29,
-    br_xs: 30,
-    br_sm: 38,
-    br_md: 39,
-    br_lg: 40,
-    br_xl: 44,
-    br_2xl: 44,
-    br_3xl: 47,
-    br_4xl: 54,
-    br_5xl: 98,
-    br_6xl: 110,
-    br_7xl: 126,
-  };
-  
