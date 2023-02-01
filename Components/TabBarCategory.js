@@ -25,7 +25,7 @@ const TabBarCategory = () => (
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        marginTop: 70,
+        marginTop: 60,
     },
     unSelectedButton: {
         marginLeft: 15,

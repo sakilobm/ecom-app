@@ -42,7 +42,7 @@ const Card = () => {
                                 </View>
                             </BlurView>
                             <BlurView
-                                intensity={100}
+                                intensity={150}
                                 style={styles.buyContainer}
                             >
                                 <Text style={styles.buyText}>{item.rate}</Text>
@@ -59,8 +59,16 @@ const Card = () => {
                 contentContainerStyle={styles.FlatList}
             />
             <View style={styles.bottomBarContainer}>
-                <Image style={styles.bottomBar} source={require('../assets/png/Bottom Navigation.png')} >
-                </Image>
+                <View style={styles.cartCounter}>
+                    <Text style={styles.cartCounterText}> 1 </Text>
+                </View>
+                <View style={styles.cartTextContainer}>
+                    <Text style={styles.cartText}>Cart<Text style={styles.cartTextCounter}> 1 Item</Text>
+                    </Text>
+                </View>
+                <TouchableOpacity style={styles.cartImageContiner}>
+                    <Image style={styles.cartImage} source={require('../assets/png/cartImage.png')} />
+                </TouchableOpacity>
             </View>
         </>
     )
@@ -73,13 +81,12 @@ const styles = StyleSheet.create({
     Container: {
         justifyContent: 'space-around',
         alignItems: 'center',
-        marginTop: 40,
+        marginTop: 30,
         flexDirection: 'row',
     },
     subTitleBoldy: {
         fontSize: 25,
         fontWeight: 'bold',
-
     },
     subTitle: {
         fontWeight: 'normal',
@@ -97,7 +104,6 @@ const styles = StyleSheet.create({
         top: 0,
         left: 0,
         bottom: 200,
-
     },
     cardContainer: {
         // backgroundColor: 'black',
@@ -138,6 +144,7 @@ const styles = StyleSheet.create({
         left: '9%',
         width: 250,
         height: 70,
+        color: 'rgba(255, 255, 255, 0.6) )',
     },
     buyText: {
         fontSize: 20,
@@ -170,12 +177,65 @@ const styles = StyleSheet.create({
         fontFamily: FontFamily.ralewayMedium,
     },
     bottomBarContainer: {
-        
+        height: 110,
+        width: 390,
+        backgroundColor: 'black',
+        left: 0,
+        top: 10,
+        borderTopLeftRadius: 30,
+        borderTopRightRadius: 30,
+        borderBottomLeftRadius: 20,
+        borderBottomRightRadius: 20,
     },
-    bottomBar: {
-        width: '100%',
-        height: '5%',
+    cartCounter: {
+        height: 43,
+        width: 43,
+        left: 30,
+        top: 25,
+        backgroundColor: '#FFEC89',
+        borderRadius: 44,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
+    cartCounterText: {
+        flexDirection: 'row',
+        fontSize: 14,
+        fontFamily: FontFamily.ralewayMedium,
+    },
+    cartTextContainer: {
+        bottom: 20,
+        left: 100,
+
+    },
+    cartText: {
+        // width: 50,
+        fontSize: 17,
+        fontFamily: FontFamily.rocknRollOne,
+        color: 'white',
+    },
+    cartTextCounter: {
+        fontSize: 14,
+        fontFamily: FontFamily.rocknRollOne,
+        color: 'rgba(255, 255, 255, 0.4)',
+    },
+    cartImageContiner: {
+        height: 60,
+        width: 60,
+        left: 300,
+        top: 0,
+        backgroundColor: 'white',
+        borderColor: '#D74343',
+        borderWidth: 2,
+        borderRadius: 44,
+        justifyContent: 'center',
+        alignItems: 'center',
+        zIndex: 100,
+    },
+    cartImage: {
+        height: 35,
+        width: 35,
+    },
+
 });
 export default Card;
 
