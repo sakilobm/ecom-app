@@ -1,15 +1,16 @@
 import { Text, View, StyleSheet, TouchableOpacity, FlatList, Image, } from 'react-native'
-import React, { useState } from 'react';
-import { FontFamily } from "./GlobalStyles";
+import React from 'react';
+import { FontFamily } from "../../GlobalStyles";
 import { FontAwesome } from '@expo/vector-icons';
 import { BlurView } from 'expo-blur';
+import { LinearGradient } from 'expo-linear-gradient';
 const data = [
-    { key: 'Double Color', rate: '₹779.00', cateConClr: 'white', category: 'Coffee Cup', color: "#3F3F3F", image: require('../assets/png/1.png') },
-    { key: 'Imaged Cup', rate: '₹679.00', cateConClr: 'white', category: 'Coffee Cup', color: "#2C9CBF", image: require('../assets/png/2.png') },
-    { key: 'Dark Russel', rate: '₹679.00', cateConClr: 'white', category: 'Coffee Cup', color: "#B9944F", image: require('../assets/png/3.png') },
-    { key: 'Leaf Design', rate: '₹999.00', cateConClr: '#454A4B', category: 'Coffee Cup', color: "#96B249", image: require('../assets/png/4.png') },
-    { key: 'Plain red Cup', rate: '₹879.00', cateConClr: '#454A4B', category: 'Coffee Cup', color: "#FFC0BB", image: require('../assets/png/5.png') },
-    { key: 'Deep Rever', rate: '₹779.00', cateConClr: '#454A4B', category: 'Coffee Cup', color: "#DDCDFE", image: require('../assets/png/5.png') },
+    { key: 'Double Color', rate: '₹779.00', cateConClr: 'white', category: 'Coffee Cup', color: "#3F3F3F", image: require('../../assets/png/1.png') },
+    { key: 'Imaged Cup', rate: '₹679.00', cateConClr: 'white', category: 'Coffee Cup', color: "#2C9CBF", image: require('../../assets/png/2.png') },
+    { key: 'Dark Russel', rate: '₹679.00', cateConClr: 'white', category: 'Coffee Cup', color: "#B9944F", image: require('../../assets/png/3.png') },
+    { key: 'Leaf Design', rate: '₹999.00', cateConClr: '#454A4B', category: 'Coffee Cup', color: "#96B249", image: require('../../assets/png/4.png') },
+    { key: 'Plain red Cup', rate: '₹879.00', cateConClr: '#454A4B', category: 'Coffee Cup', color: "#FFC0BB", image: require('../../assets/png/5.png') },
+    { key: 'Deep Rever', rate: '₹779.00', cateConClr: '#454A4B', category: 'Coffee Cup', color: "#DDCDFE", image: require('../../assets/png/6.png') },
 ];
 const Card = () => {
 
@@ -24,30 +25,30 @@ const Card = () => {
             <FlatList
                 data={data}
                 renderItem={({ item }) => (
-                    <View style={[styles.cardContainer]} >
+                    <View style={[styles.cardContainer, { overflow: 'hidden' }]} >
                         {/* TODO: Cards Rotation Animation : YT SAVE LIST NAME : OBM APP */}
                         <View style={[styles.card, { backgroundColor: item.color }]}>
-                            {/* <View style={[styles.cardImageContainer, { overflow: 'hidden' }]}>
-                                    <Image source={item.image} style={styles.cardImage} />
-                                </View> */}
-                            <BlurView
-                                intensity={80}
-                                style={styles.blurContainer}
-                            >
+                            <View style={[styles.cardImageContainer]}>
+                                <Image source={item.image} style={styles.cardImage} />
+                            </View>
+                            <BlurView intensity={250}
+                                style={styles.blurContainer} />
+                            {/* <View style={styles.blurContainer} /> */}
+                            <View style={{ position: 'absolute', }} >
                                 <View style={styles.cardTextContainer}>
                                     <Text style={styles.cardText}>{item.key}</Text>
                                 </View>
                                 <View style={[styles.categoryContainer, { backgroundColor: item.cateConClr }]} >
                                     <Text style={[styles.category, { color: item.color }]} >{item.category}</Text>
                                 </View>
-                            </BlurView>
+                            </View>
                             <BlurView
                                 intensity={150}
                                 style={styles.buyContainer}
                             >
                                 <Text style={styles.buyText}>{item.rate}</Text>
                                 <TouchableOpacity>
-                                    <Image style={styles.buyIcon} source={require('../assets/png/Buy.png')} ></Image>
+                                    <Image style={styles.buyIcon} source={require('../../assets/png/Buy.png')} ></Image>
                                 </TouchableOpacity>
                             </BlurView>
                         </View>
@@ -58,18 +59,6 @@ const Card = () => {
                 showsHorizontalScrollIndicator={false}
                 contentContainerStyle={styles.FlatList}
             />
-            <View style={styles.bottomBarContainer}>
-                <View style={styles.cartCounter}>
-                    <Text style={styles.cartCounterText}> 1 </Text>
-                </View>
-                <View style={styles.cartTextContainer}>
-                    <Text style={styles.cartText}>Cart<Text style={styles.cartTextCounter}> 1 Item</Text>
-                    </Text>
-                </View>
-                <TouchableOpacity style={styles.cartImageContiner}>
-                    <Image style={styles.cartImage} source={require('../assets/png/cartImage.png')} />
-                </TouchableOpacity>
-            </View>
         </>
     )
 }
@@ -100,25 +89,27 @@ const styles = StyleSheet.create({
     },
     blurContainer: {
         borderBottomRightRadius: 90,
+        borderTopLeftRadius: 50,
+        backgroundColor: 'white',
+        opacity: 0.5,
         position: 'absolute',
+        width: 200,
+        height: 200,
         top: 0,
         left: 0,
         bottom: 200,
     },
     cardContainer: {
-        // backgroundColor: 'black',
+        marginRight: 10,
     },
     cardText: {
         fontSize: 30,
         fontFamily: FontFamily.raleway,
         color: 'white',
-
         // shadow
-        shadowColor: 'black',
-        shadowOpacity: 0.5,
-        shadowOffset: { width: 0, height: 5 },
-        shadowRadius: 5,
-        elevation: 5,
+        textShadowOffset: { width: 0, height: 4 }, 
+        textShadowRadius: 4, 
+        textShadowColor: 'rgba(0, 0, 0, 0.25)',
 
     },
     cardTextContainer: {
@@ -131,12 +122,12 @@ const styles = StyleSheet.create({
     cardImage: {
         width: 500,
         height: 500,
-        top: 0,
-        resizeMode: 'contain',
+    },
+    cardImageContainer: {
     },
     buyContainer: {
+        position: 'absolute',
         flexDirection: 'row',
-        // position: 'relative',
         alignItems: 'center',
         justifyContent: 'space-around',
         borderRadius: 44,
@@ -149,13 +140,6 @@ const styles = StyleSheet.create({
     buyText: {
         fontSize: 20,
         fontFamily: FontFamily.purplePurse,
-    },
-    cardImageContainer: {
-        width: 400,
-        height: 400,
-        alignItems: 'center',
-        justifyContent: 'center',
-
     },
     categoryContainer: {
         width: 125,
@@ -186,55 +170,21 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 30,
         borderBottomLeftRadius: 20,
         borderBottomRightRadius: 20,
+        alignItems: 'center',
+        justifyContent: 'space-around',
     },
     cartCounter: {
         height: 43,
         width: 43,
-        left: 30,
         top: 25,
         backgroundColor: '#FFEC89',
         borderRadius: 44,
         justifyContent: 'center',
         alignItems: 'center',
     },
-    cartCounterText: {
-        flexDirection: 'row',
-        fontSize: 14,
-        fontFamily: FontFamily.ralewayMedium,
-    },
-    cartTextContainer: {
-        bottom: 20,
-        left: 100,
 
-    },
-    cartText: {
-        // width: 50,
-        fontSize: 17,
-        fontFamily: FontFamily.rocknRollOne,
-        color: 'white',
-    },
-    cartTextCounter: {
-        fontSize: 14,
-        fontFamily: FontFamily.rocknRollOne,
-        color: 'rgba(255, 255, 255, 0.4)',
-    },
-    cartImageContiner: {
-        height: 60,
-        width: 60,
-        left: 300,
-        top: 0,
-        backgroundColor: 'white',
-        borderColor: '#D74343',
-        borderWidth: 2,
-        borderRadius: 44,
-        justifyContent: 'center',
-        alignItems: 'center',
-        zIndex: 100,
-    },
-    cartImage: {
-        height: 35,
-        width: 35,
-    },
+
+
 
 });
 export default Card;

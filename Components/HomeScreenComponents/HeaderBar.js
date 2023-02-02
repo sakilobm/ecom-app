@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native'
 import Svg, { Path, Rect } from 'react-native-svg';
-import { FontFamily } from "./GlobalStyles";
+import { FontFamily } from "../GlobalStyles";
 
 const HeaderBar = () => {
     const [selectedButton, setSelectedButton] = useState('all');

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
-import { FontFamily } from './GlobalStyles'
+import { FontFamily } from '../GlobalStyles'
 import { Ionicons } from '@expo/vector-icons';
 const TabBarCategory = () => (
     <View style={styles.container} >
@@ -19,7 +19,7 @@ const TabBarCategory = () => (
             {/* <Text style={{ color: 'black', fontSize: 13, fontFamily: FontFamily.rocknRollOne, }} >Album</Text> */}
             <Ionicons size={25} name="albums-outline" color="#1A1A1A" ></Ionicons>
         </TouchableOpacity>
-        
+
     </View>
 );
 const styles = StyleSheet.create({
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
         borderRadius: 38,
         backgroundColor: '#1A1A1A'
     },
-    
+
 })
 
 export default TabBarCategory;
