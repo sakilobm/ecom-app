@@ -5,6 +5,7 @@ import HomeScreen from './Components/Screens/HomeScreen'
 import { Container } from './Styles/appStyles'
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
+import SearchingScreen from './Components/SearchingScreenComponents/SearchingHeader';
 
 export default function App() {
   //Auto Font Loader
@@ -33,7 +34,8 @@ export default function App() {
   return (
     <Container onLayout={onLayoutRootView} >
       <StatusBar style="auto" />
-      <HomeScreen/>
+      {/* <HomeScreen/> */}
+      <SearchingScreen/>
     </Container>
   );
 }

@@ -3,7 +3,6 @@ import React from 'react';
 import { FontFamily } from "../../GlobalStyles";
 import { FontAwesome } from '@expo/vector-icons';
 import { BlurView } from 'expo-blur';
-import { LinearGradient } from 'expo-linear-gradient';
 const data = [
     { key: 'Double Color', rate: '₹779.00', cateConClr: 'white', category: 'Coffee Cup', color: "#3F3F3F", image: require('../../assets/png/1.png') },
     { key: 'Imaged Cup', rate: '₹679.00', cateConClr: 'white', category: 'Coffee Cup', color: "#2C9CBF", image: require('../../assets/png/2.png') },
@@ -107,8 +106,8 @@ const styles = StyleSheet.create({
         fontFamily: FontFamily.raleway,
         color: 'white',
         // shadow
-        textShadowOffset: { width: 0, height: 4 }, 
-        textShadowRadius: 4, 
+        textShadowOffset: { width: 0, height: 4 },
+        textShadowRadius: 4,
         textShadowColor: 'rgba(0, 0, 0, 0.25)',
 
     },
@@ -122,8 +121,6 @@ const styles = StyleSheet.create({
     cardImage: {
         width: 500,
         height: 500,
-    },
-    cardImageContainer: {
     },
     buyContainer: {
         position: 'absolute',

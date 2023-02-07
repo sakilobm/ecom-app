@@ -1,7 +1,7 @@
 import { Text, View, StyleSheet, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 import Svg, { Path, Rect } from 'react-native-svg';
-import { FontFamily } from "../../GlobalStyles";
+import { FontFamily } from "../GlobalStyles";
 
 const BottomBarNavigation = () => {
     return (
@@ -18,7 +18,7 @@ const BottomBarNavigation = () => {
                         </Text>
                     </View>
                     <View style={styles.cartImageContiner}>
-                        <Image style={styles.cartImage} source={require('../../assets/png/cartImage.png')} />
+                        <Image style={styles.cartImage} source={require('../assets/png/cartImage.png')} />
                     </View>
                 </View>
             </Svg>

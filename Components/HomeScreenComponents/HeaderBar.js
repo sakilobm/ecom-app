@@ -17,7 +17,7 @@ const HeaderBar = () => {
             </View>
             <TouchableOpacity style={styles.svgCont}>
                 <Svg width="69" height="95" viewBox="0 0 69 95" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <Rect x="2" y="2" width="65" height="91" rx="32.5" fill="white" stroke="black" stroke-width="4" />
+                    <Rect x="2" y="2" width="65" height="91" rx="32.5" fill="white" stroke="#F3F3F3" strokeWidth="6" />
                     <Path d="M27 40L41 40" stroke="black" stroke-width="2" stroke-linecap="round" />
                     <Path d="M22 49H46" stroke="black" stroke-width="2" stroke-linecap="round" />
                     <Path d="M27 58L41 58" stroke="black" stroke-width="2" stroke-linecap="round" />

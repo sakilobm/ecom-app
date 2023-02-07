@@ -4,7 +4,7 @@ import { Text, View, StyleSheet, TouchableOpacity } from 'react-native'
 import HeaderBar from '../HomeScreenComponents/HeaderBar';
 import TabBarCategory from '../HomeScreenComponents/TabBarCategory';
 import Card from '../HomeScreenComponents/Card';
-import BottomBarNavigation from '../HomeScreenComponents/BottomBarNavigation';
+import BottomBarNavigation from '../BottomBarNavigation';
 
 
 const HomeScreen = () => {
