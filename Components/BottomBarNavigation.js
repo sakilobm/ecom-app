@@ -2,7 +2,7 @@ import { Text, View, StyleSheet, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 import Svg, { Path, Rect } from 'react-native-svg';
 import { FontFamily } from "../GlobalStyles";
-
+// TODO Bottom Navigation Bar REDESIGN and added to new SVG
 const BottomBarNavigation = () => {
     return (
         <TouchableOpacity>
