@@ -5,7 +5,10 @@ import HomeScreen from './Components/Screens/HomeScreen'
 import { Container } from './Styles/appStyles'
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
-import SearchingScreen from './Components/SearchingScreenComponents/SearchingHeader';
+import SearchingScreen from './Components/Screens/SearchingScreen';
+import SearchingHeader from './Components/SearchingScreenComponents/SearchingHeader';
+import Filter from './Components/SearchingScreenComponents/Filter';
+import SmallCards from './Components/SearchingScreenComponents/SmallCards';
 
 export default function App() {
   //Auto Font Loader
@@ -31,11 +34,15 @@ export default function App() {
     return null;
   }
   //Auto Font Loader -END
+
   return (
     <Container onLayout={onLayoutRootView} >
       <StatusBar style="auto" />
       {/* <HomeScreen/> */}
-      <SearchingScreen/>
+      <SearchingScreen />
+      {/* <SearchingHeader/> */}
+      {/* <Filter/> */}
+      {/* <SmallCards/> */}
     </Container>
   );
 }

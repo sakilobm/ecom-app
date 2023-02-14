@@ -11,8 +11,8 @@ const HeaderBar = () => {
         <View style={styles.header} >
             <View style={styles.watermarkContainer}>
                 <Text style={styles.watermark}>
-                    Order From The
-                    Best Of <Text style={styles.mugsTitle}> Mugs</Text>
+                    Order From The {'\n'}
+                    Best Of<Text style={styles.mugsTitle}> Mugs</Text>
                 </Text>
             </View>
             <TouchableOpacity style={styles.svgCont}>
@@ -37,7 +37,6 @@ const styles = StyleSheet.create({
         marginLeft: 20,
     },
     watermark: {
-        width: 250,
         top: 40,
         fontSize: 30,
         color: 'black',

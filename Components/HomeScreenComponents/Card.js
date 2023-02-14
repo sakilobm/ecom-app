@@ -64,6 +64,7 @@ const Card = () => {
 const styles = StyleSheet.create({
     FlatList: {
         marginTop: 10,
+
         // backgroundColor: 'grey',
     },
     Container: {
@@ -92,8 +93,8 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         opacity: 0.5,
         position: 'absolute',
-        width: 200,
-        height: 200,
+        width: 50,
+        height: 50,
         top: 0,
         left: 0,
         bottom: 200,
@@ -102,7 +103,7 @@ const styles = StyleSheet.create({
         marginRight: 10,
     },
     cardText: {
-        fontSize: 30,
+        fontSize: 12,
         fontFamily: FontFamily.raleway,
         color: 'white',
         // shadow
@@ -179,10 +180,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
-
-
-
-
 });
+
 export default Card;
 

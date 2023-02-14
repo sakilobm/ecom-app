@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native'
 // import CategoryBar from '../CategoryBar';
 import HeaderBar from '../HomeScreenComponents/HeaderBar';
