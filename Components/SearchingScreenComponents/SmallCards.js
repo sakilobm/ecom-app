@@ -18,7 +18,6 @@ const SmallCards = () => {
             <FlatList
                 data={data}
                 renderItem={({ item }) => (
-                    // TODO: Overflow Hidden is getting image to the out of container with extra space 
                     <View style={[styles.cardContainer, { overflow: 'hidden' }]} >
                         {/* TODO: Cards Rotation Animation : YT SAVE LIST NAME : OBM APP */}
                         <View style={[styles.card, { backgroundColor: item.color }]}>
@@ -32,6 +31,7 @@ const SmallCards = () => {
                                     <Text style={[styles.category, { color: item.color }]} >{item.category}</Text>
                                 </View>
                             </View>
+                            {/* TODO CardImage Should Be In Same Size */}
                             <Image style={styles.cardImage} source={item.image} />
                             <BlurView
                                 intensity={150}
@@ -57,12 +57,11 @@ const SmallCards = () => {
 const styles = StyleSheet.create({
     FlatList: {
         flexDirection: 'column',
-        // marginTop: 5,
+        paddingBottom: 60,
     },
     Container: {
         justifyContent: 'space-around',
         alignItems: 'center',
-        marginTop: 30,
         flexDirection: 'row',
     },
     subTitleBoldy: {
@@ -73,7 +72,7 @@ const styles = StyleSheet.create({
         fontWeight: 'normal',
     },
     card: {
-        marginTop: 20,
+        marginTop: 15,
         marginLeft: 17,
         width: 170,
         height: 215,
@@ -85,17 +84,16 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         opacity: 0.5,
         position: 'absolute',
-        width: 130,
-        height: 130,
+        width: 120,
+        height: 120,
         top: 0,
         left: -10,
         bottom: 200,
     },
     cardContainer: {
-        // marginBottom: 10,
     },
     cardText: {
-        fontSize: 20,
+        fontSize: 16,
         fontFamily: FontFamily.raleway,
         color: 'white',
         // shadow
@@ -112,7 +110,7 @@ const styles = StyleSheet.create({
         lineHeight: 40,
     },
     cardImage: {
-        top: 50,
+        top: 40,
         left: 30,
         width: 200,
         height: 200,

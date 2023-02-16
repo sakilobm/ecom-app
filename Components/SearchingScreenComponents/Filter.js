@@ -5,7 +5,7 @@ import { Svg, Path, Rect } from 'react-native-svg';
 
 const Filter = () => {
     return (
-        <View style={{ alignItems: 'flex-end', right: 20 }} >
+        <View style={{ alignItems: 'flex-end', right: 20, marginBottom: 10, }} >
             <View style={styles.filterContainer}>
                 <Text style={styles.title}> <Text style={{ fontWeight: '800', fontFamily: FontFamily.ralewayMedium }} >245 </Text>Items</Text>
                 <TouchableOpacity style={{ left: 10 }} >
