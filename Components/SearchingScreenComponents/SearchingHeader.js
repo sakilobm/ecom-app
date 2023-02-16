@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native'
 import { FontFamily } from '../GlobalStyles';
 import { Svg, Path, Rect } from 'react-native-svg';
