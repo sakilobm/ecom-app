@@ -1,10 +1,10 @@
 import React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native'
 // import CategoryBar from '../CategoryBar';
-import HeaderBar from '../HomeScreenComponents/HeaderBar';
-import TabBarCategory from '../HomeScreenComponents/TabBarCategory';
-import Card from '../HomeScreenComponents/Card';
-import BottomBarNavigation from '../BottomBarNavigation';
+import HeaderBar from '../Components/HomeScreenComponents/HeaderBar';
+import TabBarCategory from '../Components/HomeScreenComponents/TabBarCategory';
+import Card from '../Components/HomeScreenComponents/Card';
+import BottomBarNavigation from '../Components/BottomBarNavigation';
 
 
 const HomeScreen = () => {

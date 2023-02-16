@@ -27,12 +27,12 @@ const Card = () => {
                     <View style={[styles.cardContainer, { overflow: 'hidden' }]} >
                         {/* TODO: Cards Rotation Animation : YT SAVE LIST NAME : OBM APP */}
                         <View style={[styles.card, { backgroundColor: item.color }]}>
-                            <View style={[styles.cardImageContainer]}>
-                                <Image source={item.image} style={styles.cardImage} />
-                            </View>
                             <BlurView intensity={250}
                                 style={styles.blurContainer} />
                             {/* <View style={styles.blurContainer} /> */}
+                            <View style={[styles.cardImageContainer]}>
+                                <Image source={item.image} style={styles.cardImage} />
+                            </View>
                             <View style={{ position: 'absolute', }} >
                                 <View style={styles.cardTextContainer}>
                                     <Text style={styles.cardText}>{item.key}</Text>
@@ -93,8 +93,8 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         opacity: 0.5,
         position: 'absolute',
-        width: 50,
-        height: 50,
+        width: 200,
+        height: 200,
         top: 0,
         left: 0,
         bottom: 200,
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
         marginRight: 10,
     },
     cardText: {
-        fontSize: 12,
+        fontSize: 36,
         fontFamily: FontFamily.raleway,
         color: 'white',
         // shadow
@@ -114,12 +114,13 @@ const styles = StyleSheet.create({
     },
     cardTextContainer: {
         width: 150,
-        marginTop: 35,
-        marginLeft: 40,
+        marginTop: 20,
+        marginLeft: 30,
         marginRight: 10,
         lineHeight: 40,
     },
     cardImage: {
+        top: -15,
         width: 500,
         height: 500,
     },

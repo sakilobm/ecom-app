@@ -1,11 +1,11 @@
 import { StatusBar } from 'expo-status-bar'
 import React, { useCallback } from 'react';
 // import ParallaxRender from './Components/ParallaxRender'
-import HomeScreen from './Components/Screens/HomeScreen'
+import HomeScreen from './Screens/HomeScreen'
 import { Container } from './Styles/appStyles'
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
-import SearchingScreen from './Components/Screens/SearchingScreen';
+import SearchingScreen from './Screens/SearchingScreen';
 
 export default function App() {
   //Auto Font Loader
@@ -35,8 +35,8 @@ export default function App() {
   return (
     <Container onLayout={onLayoutRootView} >
       <StatusBar style="auto" />
-      {/* <HomeScreen/> */}
-      <SearchingScreen />
+      <HomeScreen />
+      {/* <SearchingScreen /> */}
     </Container>
   );
 }

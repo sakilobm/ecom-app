@@ -1,9 +1,9 @@
 import React, { useCallback } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native'
-import SearchingHeader from '../SearchingScreenComponents/SearchingHeader'
-import Filter from '../SearchingScreenComponents/Filter'
-import SmallCards from '../SearchingScreenComponents/SmallCards'
-import BottomBarNavigation from '../BottomBarNavigation'
+import SearchingHeader from '../Components/SearchingScreenComponents/SearchingHeader'
+import Filter from '../Components/SearchingScreenComponents/Filter'
+import SmallCards from '../Components/SearchingScreenComponents/SmallCards'
+import BottomBarNavigation from '../Components/BottomBarNavigation'
 
 const SearchingScreen = () => {
     return (
