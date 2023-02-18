@@ -9,6 +9,7 @@ import * as SplashScreen from 'expo-splash-screen';
 // import HomeScreen from './Screens/HomeScreen'
 import SearchingScreen from './Screens/SearchingScreen';
 import ProductMugScreen from './Screens/ProductMugScreen';
+import AddToCartScreen from './Screens/AddToCartScreen';
 
 export default function App() {
   //Auto Font Loader
@@ -41,7 +42,8 @@ export default function App() {
       <StatusBar style="auto" />
       {/* <HomeScreen /> */}
       {/* <SearchingScreen /> */}
-      <ProductMugScreen />
+      {/* <ProductMugScreen /> */}
+      <AddToCartScreen/>
     </Container>
   );
 }

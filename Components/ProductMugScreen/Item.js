@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text, View, StyleSheet, Dimensions, Animated, } from 'react-native'
-import { FontFamily } from '../GlobalStyles';
+import { FontFamily } from '../../GlobalStyles';
 const { width, height } = Dimensions.get('window');
 const LOGO_WIDTH = 220;
 const LOGO_HEIGHT = 40;
@@ -91,6 +91,7 @@ const styles = StyleSheet.create({
     },
     heading: {
         color: '#444',
+        fontFamily: FontFamily.rocknRollOne,
         textTransform: 'uppercase',
         fontSize: 24,
         fontWeight: '800',
