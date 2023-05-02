@@ -3,13 +3,17 @@ import React, { useCallback } from 'react';
 import { Container } from './Styles/appStyles'
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
-
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // Components 
 // import ParallaxRender from './Components/ParallaxRender'
-// import HomeScreen from './Screens/HomeScreen'
+import HomeScreen from './Screens/HomeScreen'
 import SearchingScreen from './Screens/SearchingScreen';
 import ProductMugScreen from './Screens/ProductMugScreen';
 import AddToCartScreen from './Screens/AddToCartScreen';
+import ProductMugDetailsScreen from './Screens/ProductMugDetailsScreen';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   //Auto Font Loader
@@ -38,13 +42,22 @@ export default function App() {
   //Auto Font Loader -END
 
   return (
-    <Container onLayout={onLayoutRootView} >
-      <StatusBar style="auto" />
-      {/* <HomeScreen /> */}
-      {/* <SearchingScreen /> */}
-      {/* <ProductMugScreen /> */}
-      <AddToCartScreen/>
-    </Container>
+    <NavigationContainer>
+      <Container onLayout={onLayoutRootView}>
+        <Stack.Navigator initialRouteName="Mug" screenOptions={{ headerShown: false, }}>
+          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="Search" component={SearchingScreen} />
+          <Stack.Screen name="Mug" component={ProductMugScreen} />
+          <Stack.Screen name="MugDetail" component={ProductMugDetailsScreen} />
+          <Stack.Screen name="Cart" component={AddToCartScreen} />
+        </Stack.Navigator>
+        <StatusBar style="auto" />
+        {/* <HomeScreen /> */}
+        {/* <SearchingScreen /> */}
+        {/* <ProductMugScreen /> */}
+        {/* <AddToCartScreen /> */}
+      </Container>
+    </NavigationContainer>
   );
 }
 

@@ -19,7 +19,6 @@ const TabBarCategory = () => (
             {/* <Text style={{ color: 'black', fontSize: 13, fontFamily: FontFamily.rocknRollOne, }} >Album</Text> */}
             <Ionicons size={25} name="albums-outline" color="#1A1A1A" ></Ionicons>
         </TouchableOpacity>
-
     </View>
 );
 const styles = StyleSheet.create({

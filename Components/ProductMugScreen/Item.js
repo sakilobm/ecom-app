@@ -1,11 +1,14 @@
 import React from 'react'
-import { Text, View, StyleSheet, Dimensions, Animated, } from 'react-native'
+import { Text, View, StyleSheet, Dimensions, Animated, TouchableOpacity } from 'react-native'
+import { useNavigation } from "@react-navigation/native";
 import { FontFamily } from '../../GlobalStyles';
-const { width, height } = Dimensions.get('window');
+const { width, height } = Dimensions.get('screen');
 const LOGO_WIDTH = 220;
 const LOGO_HEIGHT = 40;
 
-const Item = ({ imageUri, heading, description, index, scrollX }) => {
+const Item = ({ item, index, scrollX }) => {
+    const navigation = useNavigation();
+    const { imageUri, heading, description } = item;
     const inputRange = [(index - 1) * width, index * width, (index + 1) * width];
     const inputRangeOpacity = [
         (index - 0.3) * width,
@@ -30,7 +33,7 @@ const Item = ({ imageUri, heading, description, index, scrollX }) => {
     });
 
     return (
-        <View style={styles.itemStyle}>
+        <TouchableOpacity activeOpacity={.8} onPress={() => navigation.navigate('MugDetail')} style={styles.itemStyle}>
             <Animated.Image
                 source={imageUri}
                 style={[
@@ -68,7 +71,7 @@ const Item = ({ imageUri, heading, description, index, scrollX }) => {
                     {description}
                 </Animated.Text>
             </View>
-        </View>
+        </TouchableOpacity>
     );
 };
 const styles = StyleSheet.create({
@@ -79,8 +82,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     imageStyle: {
-        width: width * 0.75,
-        height: width * 0.75,
+        top: 55,
+        width: width * 1.2,
+        height: width * 1.2,
         resizeMode: 'contain',
         flex: 1,
     },

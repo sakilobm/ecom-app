@@ -3,7 +3,7 @@ import { Text, View, StyleSheet, Dimensions, Animated, } from 'react-native'
 import { FontFamily } from '../GlobalStyles';
 import data from './data';
 const { width, height } = Dimensions.get('window');
-const TICKER_HEIGHT = 40;
+const TICKER_HEIGHT = 30;
 
 const Ticker = ({ scrollX }) => {
     const inputRange = [-width, 0, width];
@@ -28,7 +28,7 @@ const Ticker = ({ scrollX }) => {
 const styles = StyleSheet.create({
     tickerContainer: {
         position: 'absolute',
-        top: 40,
+        top: 50,
         left: 20,
         overflow: 'hidden',
         height: TICKER_HEIGHT,

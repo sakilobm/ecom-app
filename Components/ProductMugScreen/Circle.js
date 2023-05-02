@@ -4,7 +4,7 @@ import { FontFamily } from '../GlobalStyles';
 import data from './data';
 
 const { width, height } = Dimensions.get('window');
-const CIRCLE_SIZE = width * 0.6;
+const CIRCLE_SIZE = width * 0.9;
 
 const Circle = ({ scrollX }) => {
     return (

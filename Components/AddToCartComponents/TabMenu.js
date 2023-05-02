@@ -10,22 +10,22 @@ const TabMenu = () => {
                 <Path d="M0 57.23C0 27.8319 23.8319 4 53.23 4H148.06C152.314 4 156.528 4.81678 160.474 6.40597L172.228 11.14C177.362 13.2074 182.844 14.27 188.378 14.27H241.286C245.393 14.27 249.465 13.5086 253.294 12.0245L268.206 6.24545C272.035 4.76135 276.107 4 280.214 4H374.77C404.168 4 428 27.8319 428 57.23V663.77C428 682.122 413.122 802 394.77 802H33.23C14.8776 802 0 682.122 0 663.77V57.23Z" fill="#1A1A1A" />
                 <Path d="M192 4H236" stroke="#959595" strokeWidth="8" strokeLinecap="round" />
                 <FlatList
-                    keyExtractor={(item) => item.key}
+                    keyExtractor={item => item.key}
                     data={data}
                     showsVerticalScrollIndicator={false}
                     vertical={true}
                     contentContainerStyle={styles.FlatList}
                     renderItem={({ item }) => (
-                        <View style={styles.itemContainer} >
+                        <View key={item.id} style={styles.itemContainer} >
                             <View style={styles.addToCartCircle} >
-                                <Image style={styles.addToCartCircleImage} source={item.imageUri} />
+                                <Image key={`${item.id}_imageUri`} style={styles.addToCartCircleImage} source={item.imageUri} />
                             </View>
-                            <View>
-                                <Text style={styles.addToCartHeading} >{item.heading}</Text>
-                                <Text style={styles.addToCartSubHeading} >{item.sub}</Text>
+                            <View key={item.id}>
+                                <Text key={`${item.id}_heading`} style={styles.addToCartHeading} >{item.heading}</Text>
+                                <Text key={`${item.id}_sub`} style={styles.addToCartSubHeading} >{item.sub}</Text>
                             </View>
                             <View style={styles.rateContainer} >
-                                <Text style={styles.rate} >{item.rate}</Text>
+                                <Text key={`${item.id}-rate`} style={styles.rate} >{item.rate}</Text>
                             </View>
                         </View>
                     )} />
