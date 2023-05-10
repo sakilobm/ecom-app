@@ -2,7 +2,6 @@ import * as React from "react";
 import { Image, StyleSheet, Text, Pressable, View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 // import { useNavigation } from "@react-navigation/native";
-import { FontFamily, Color, FontSize, Border } from "../../GlobalStyles";
 import { Raleway } from '../../../assets/fonts/Raleway-Bold.ttf'
 const Welcome = () => {
     //   const navigation = useNavigation();
@@ -75,7 +74,7 @@ const styles = StyleSheet.create({
         top: 191,
         left: 44,
         fontSize: 56,
-        fontFamily: Raleway,
+        fontFamily: 'Raleway',
         color: Color.white,
         textAlign: "center",
         width: 338,
@@ -118,7 +117,7 @@ const styles = StyleSheet.create({
     onboarding: {
         top: -63,
         fontSize: FontSize.size_3xl,
-        fontFamily: FontFamily.ruslanDisplay,
+        fontFamily: 'Ruslan Display',
         color: Color.black,
         textAlign: "left",
     },

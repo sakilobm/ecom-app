@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, TouchableOpacity, } from 'react-native'
 import React from 'react'
 import { Svg, Path, Rect } from 'react-native-svg'
-import { FontFamily } from '../../GlobalStyles'
+
 const PaymentButton = () => {
     return (
         <View style={{ alignItems: 'center', flexDirection: 'column', }} >
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         color: 'black',
         fontSize: 16,
         right: -35,
-        fontFamily: FontFamily.rocknRollOne,
+        fontFamily: 'RocknRoll One',
     },
     forwardBtn: {
         right: -19,

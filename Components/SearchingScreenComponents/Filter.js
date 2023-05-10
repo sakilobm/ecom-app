@@ -1,13 +1,12 @@
 import React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native'
-import { FontFamily } from "../../GlobalStyles";
 import { Svg, Path, Rect } from 'react-native-svg';
 
 const Filter = () => {
     return (
         <View style={{ alignItems: 'flex-end', right: 20, marginBottom: 10, }} >
             <View style={styles.filterContainer}>
-                <Text style={styles.title}> <Text style={{ fontWeight: '800', fontFamily: FontFamily.ralewayMedium }} >245 </Text>Items</Text>
+                <Text style={styles.title}> <Text style={{ fontWeight: '800', fontFamily: 'Raleway-Medium' }} >245 </Text>Items</Text>
                 <TouchableOpacity style={{ left: 10 }} >
                     <Svg width="56" height="43" viewBox="0 0 56 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <Rect x="55.2708" y="0.729736" width="41.7778" height="55.2064" rx="20.8889" transform="rotate(90 55.2708 0.729736)" fill="white" />
@@ -36,7 +35,7 @@ const styles = StyleSheet.create({
     title: {
         left: 15,
         fontSize: 12,
-        fontFamily: FontFamily.ralewayMedium,
+        fontFamily: 'Raleway-Medium',
         fontWeight: 'normal',
     }
 

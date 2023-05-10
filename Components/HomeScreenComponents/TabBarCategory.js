@@ -5,18 +5,18 @@ import { Ionicons } from '@expo/vector-icons';
 const TabBarCategory = () => (
     <View style={styles.container} >
         <TouchableOpacity style={styles.unSelectedButton} >
-            <Text style={{ color: 'black', fontSize: 13, fontFamily: FontFamily.rocknRollOne, }} >All</Text>
+            <Text style={{ color: 'black', fontSize: 13, fontFamily: 'RocknRoll One', }} >All</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.selectedButton} >
             <Ionicons size={25} name="cafe-outline" color="#DBBF2E" ></Ionicons>
-            <Text style={{ color: 'white', fontSize: 13, fontFamily: FontFamily.rocknRollOne, }} >  Mugs</Text>
+            <Text style={{ color: 'white', fontSize: 13, fontFamily: 'RocknRoll One', }} >  Mugs</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.unSelectedButton} >
-            {/* <Text style={{ color: 'black', fontSize: 13, fontFamily: FontFamily.rocknRollOne, }} >Frame</Text> */}
+            {/* <Text style={{ color: 'black', fontSize: 13, fontFamily: 'RocknRoll One', }} >Frame</Text> */}
             <Ionicons size={25} name="images-outline" color="#1A1A1A" ></Ionicons>
         </TouchableOpacity>
         <TouchableOpacity style={styles.unSelectedButton} >
-            {/* <Text style={{ color: 'black', fontSize: 13, fontFamily: FontFamily.rocknRollOne, }} >Album</Text> */}
+            {/* <Text style={{ color: 'black', fontSize: 13, fontFamily: 'RocknRoll One', }} >Album</Text> */}
             <Ionicons size={25} name="albums-outline" color="#1A1A1A" ></Ionicons>
         </TouchableOpacity>
     </View>

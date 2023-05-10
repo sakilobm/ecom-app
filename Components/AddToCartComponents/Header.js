@@ -1,6 +1,5 @@
 import { View, Text, StyleSheet, TouchableOpacity, Dimensions, Image, FlatList } from 'react-native'
 import React from 'react'
-import { FontFamily } from '../../GlobalStyles'
 
 const Header = () => {
     const { width, height } = Dimensions.get('window');
@@ -29,7 +28,7 @@ const styles = StyleSheet.create({
         top: 60,
         fontSize: 46,
         color: 'black',
-        fontFamily: FontFamily.urbanist,
+        fontFamily: 'Urbanist',
     },
     circleContainer: {
         top: 65,
@@ -42,7 +41,7 @@ const styles = StyleSheet.create({
     },
     circleText: {
         fontSize: 18,
-        fontFamily: FontFamily.ralewayMedium,
+        fontFamily: 'Raleway-Medium',
     },
 })
 export default Header;

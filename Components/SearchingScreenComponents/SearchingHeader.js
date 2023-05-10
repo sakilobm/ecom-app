@@ -1,13 +1,12 @@
 import React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native'
-import { FontFamily } from '../GlobalStyles';
 import { Svg, Path, Rect } from 'react-native-svg';
 
 const SearchingHeader = () => {
     return (
         <View style={styles.HeadContainer}>
             <View style={styles.titleContainer}>
-                <Text style={styles.title}>Mugs {"\n"}<Text style={{ fontFamily: FontFamily.ralewayMedium }} >Collection</Text></Text>
+                <Text style={styles.title}>Mugs {"\n"}<Text style={{ fontFamily: 'Raleway-Medium' }} >Collection</Text></Text>
             </View>
             <TouchableOpacity View style={styles.svgContainer}>
                 <Svg width="69" height="95" viewBox="0 0 69 95" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,7 +25,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
     },
     title: {
-        fontFamily: FontFamily.raleway,
+        fontFamily: 'Raleway',
         fontSize: 39,
         flexDirection: 'row',
         justifyContent: 'space-around',

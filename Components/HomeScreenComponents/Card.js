@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
     },
     cardText: {
         fontSize: 36,
-        fontFamily: FontFamily.raleway,
+        fontFamily: 'Raleway',
         color: 'white',
         // shadow
         textShadowOffset: { width: 0, height: 4 },
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
     },
     buyText: {
         fontSize: 20,
-        fontFamily: FontFamily.purplePurse,
+        fontFamily: 'Purple Purse',
     },
     categoryContainer: {
         width: 125,
@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
     },
     category: {
         fontSize: 14,
-        fontFamily: FontFamily.ralewayMedium,
+        fontFamily: 'Raleway-Medium',
     },
     bottomBarContainer: {
         height: 110,

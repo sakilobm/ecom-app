@@ -1,7 +1,7 @@
 import { View, Text, FlatList, StyleSheet, Image } from 'react-native'
 import React from 'react'
 import { Svg, Path, G, Rect, ClipPath, Defs } from 'react-native-svg'
-import { FontFamily } from '../../GlobalStyles'
+
 const TotalContainer = () => {
     return (
         <Svg style={{ top: -330, }} width="356" height="188" viewBox="0 0 356 188" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,24 +37,24 @@ const styles = StyleSheet.create({
         top: 40,
         left: 40,
         fontSize: 16,
-        fontFamily: FontFamily.rocknRollOne,
+        fontFamily: 'RocknRoll One',
     },
     deliveryRate: {
         top: 40,
         right: 40,
         fontSize: 16,
-        fontFamily: FontFamily.raleway,
+        fontFamily: 'Raleway',
     },
     total: {
         top: 70,
         fontSize: 17,
-        fontFamily: FontFamily.rocknRollOne,
+        fontFamily: 'RocknRoll One',
     },
     totalRate: {
         top: 70,
         left: 40,
         fontSize: 29,
-        fontFamily: FontFamily.raleway,
+        fontFamily: 'Raleway',
     },
     totalImage: {
         top: 5,

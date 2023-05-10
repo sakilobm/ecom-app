@@ -1,6 +1,5 @@
 import React from 'react'
 import { Text, View, StyleSheet, Dimensions, Animated, } from 'react-native'
-import { FontFamily } from '../GlobalStyles';
 import data from './data';
 const { width, height } = Dimensions.get('window');
 const TICKER_HEIGHT = 30;

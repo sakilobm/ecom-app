@@ -1,7 +1,6 @@
 import { View, Text, FlatList, StyleSheet, Image } from 'react-native'
 import React from 'react'
 import { Svg, Path } from 'react-native-svg'
-import { FontFamily } from '../../GlobalStyles'
 import data from './data'
 const TabMenu = () => {
     return (
@@ -64,18 +63,18 @@ const styles = StyleSheet.create({
     addToCartHeading: {
         color: 'white',
         fontSize: 16,
-        fontFamily: FontFamily.rocknRollOne,
+        fontFamily: 'RocknRoll One',
     },
     addToCartSubHeading: {
         color: 'gray',
         fontSize: 13,
-        fontFamily: FontFamily.rocknRollOne,
+        fontFamily: 'RocknRoll One',
     },
     rate: {
         top: -2,
         color: 'black',
         fontSize: 15,
-        fontFamily: FontFamily.raleway,
+        fontFamily: 'Raleway',
     },
     rateContainer: {
         backgroundColor: 'white',

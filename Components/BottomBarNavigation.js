@@ -1,7 +1,6 @@
 import { Text, View, StyleSheet, TouchableOpacity, Image, ImageBackground } from 'react-native'
 import React from 'react'
 import Svg, { Path, Rect, Ellipse, Defs, Pattern, Use, SvgXml } from 'react-native-svg';
-import { FontFamily } from "../GlobalStyles";
 
 const BottomBarNavigation = () => {
     const svgXml = `<svg width="405" height="113" viewBox="8 0 405 113" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,7 +46,7 @@ const styles = StyleSheet.create({
     },
     circleText: {
         fontSize: 14,
-        fontFamily: FontFamily.ralewayMedium,
+        fontFamily: 'Raleway-Medium',
     },
     cartTextContainer: {
         right: 50,
@@ -55,12 +54,12 @@ const styles = StyleSheet.create({
     cartText: {
         width: 50,
         fontSize: 17,
-        fontFamily: FontFamily.rocknRollOne,
+        fontFamily: 'RocknRoll One',
         color: 'white',
     },
     cartTextCounter: {
         fontSize: 14,
-        fontFamily: FontFamily.rocknRollOne,
+        fontFamily: 'RocknRoll One',
         color: 'rgba(255, 255, 255, 0.4)',
     },
     cartImageContainer: {

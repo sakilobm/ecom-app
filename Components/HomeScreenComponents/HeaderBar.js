@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
         top: 40,
         fontSize: 30,
         color: 'black',
-        fontFamily: FontFamily.ralewayMedium,
+        fontFamily: 'Raleway-Medium',
         fontWeight: 'normal',
     },
     svgCont: {
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     },
     mugsTitle: {
         color: '#DBBF2E',
-        fontFamily: FontFamily.ralewayBold,
+        fontFamily: 'Raleway-Bold',
         fontWeight: '200',
     },
 

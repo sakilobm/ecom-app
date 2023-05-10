@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, View, StyleSheet, Dimensions, Animated, TouchableOpacity } from 'react-native'
 import { useNavigation } from "@react-navigation/native";
-import { FontFamily } from '../../GlobalStyles';
+
 const { width, height } = Dimensions.get('screen');
 const LOGO_WIDTH = 220;
 const LOGO_HEIGHT = 40;
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     },
     heading: {
         color: '#444',
-        fontFamily: FontFamily.rocknRollOne,
+        fontFamily: 'RocknRoll One',
         textTransform: 'uppercase',
         fontSize: 24,
         fontWeight: '800',
