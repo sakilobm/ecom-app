@@ -6,13 +6,12 @@ import TabBarCategory from '../Components/HomeScreenComponents/TabBarCategory';
 import Card from '../Components/HomeScreenComponents/Card';
 import BottomBarNavigation from '../Components/BottomBarNavigation';
 
-
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <HeaderBar />
             <TabBarCategory />
-            <Card />
+            <Card navigation={navigation}/>
             <BottomBarNavigation />
             {/* <CategoryBar /> */}
         </View>
@@ -21,6 +20,7 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: 'white',
     },
 
 });

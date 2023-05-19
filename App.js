@@ -12,6 +12,8 @@ import SearchingScreen from './Screens/SearchingScreen';
 import ProductMugScreen from './Screens/ProductMugScreen';
 import AddToCartScreen from './Screens/AddToCartScreen';
 import ProductMugDetailsScreen from './Screens/ProductMugDetailsScreen';
+import WelcomeScreen from './Screens/OnboardingScreen/WelcomeScreen';
+import SecOnboardScreen from './Screens/OnboardingScreen/SecOnboardScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -44,12 +46,14 @@ export default function App() {
   return (
     <NavigationContainer>
       <Container onLayout={onLayoutRootView}>
-        <Stack.Navigator initialRouteName="Mug" screenOptions={{ headerShown: false, }}>
+        <Stack.Navigator initialRouteName="WelcomeScreen" screenOptions={{ headerShown: false, }}>
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Search" component={SearchingScreen} />
           <Stack.Screen name="Mug" component={ProductMugScreen} />
           <Stack.Screen name="MugDetail" component={ProductMugDetailsScreen} />
           <Stack.Screen name="Cart" component={AddToCartScreen} />
+          <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
+          <Stack.Screen name="SecOnboardScreen" component={SecOnboardScreen} />
         </Stack.Navigator>
         <StatusBar style="auto" />
         {/* <HomeScreen /> */}

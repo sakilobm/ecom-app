@@ -1,9 +1,10 @@
 import React from 'react'
 import { Text, View, StyleSheet, Dimensions, Animated, } from 'react-native'
 import data from './data';
+import { Svg, Path } from 'react-native-svg';
 
 const { width, height } = Dimensions.get('window');
-const CIRCLE_SIZE = width * 0.9;
+const CIRCLE_SIZE = width * 0.66;
 
 const Circle = ({ scrollX }) => {
     return (
@@ -29,12 +30,16 @@ const Circle = ({ scrollX }) => {
                         style={[
                             styles.circle,
                             {
-                                backgroundColor: color,
+                                borderBottomColor: color,
                                 opacity,
                                 transform: [{ scale }],
                             },
                         ]}
-                    />
+                    >
+                        <Svg width="350" height="350" viewBox="0 0 742 671" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <Path d="M274.005 55.9999C317.114 -18.6667 424.886 -18.6667 467.995 56L726.07 503C769.179 577.667 715.293 671 629.076 671H112.924C26.7067 671 -27.1792 577.667 15.9296 503L274.005 55.9999Z" fill={color} />
+                        </Svg>
+                    </Animated.View>
                 );
             })}
         </View>
@@ -43,15 +48,16 @@ const Circle = ({ scrollX }) => {
 const styles = StyleSheet.create({
 
     circleContainer: {
+        // top: 50,
         alignItems: 'center',
         justifyContent: 'center',
     },
     circle: {
-        width: CIRCLE_SIZE,
-        height: CIRCLE_SIZE,
-        borderRadius: CIRCLE_SIZE / 2,
+        top: '18%',
+        // width: CIRCLE_SIZE,
+        // height: CIRCLE_SIZE,
+        // borderRadius: 300,
         position: 'absolute',
-        top: '15%',
     },
 });
 export default Circle;

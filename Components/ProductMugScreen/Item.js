@@ -1,6 +1,7 @@
 import React from 'react'
 import { Text, View, StyleSheet, Dimensions, Animated, TouchableOpacity } from 'react-native'
 import { useNavigation } from "@react-navigation/native";
+import { Shadow } from 'react-native-shadow-2';
 
 const { width, height } = Dimensions.get('screen');
 const LOGO_WIDTH = 220;
@@ -33,7 +34,7 @@ const Item = ({ item, index, scrollX }) => {
     });
 
     return (
-        <TouchableOpacity activeOpacity={.8} onPress={() => navigation.navigate('MugDetail')} style={styles.itemStyle}>
+        <TouchableOpacity activeOpacity={.8} onPress={() => navigation.navigate('MugDetail', { item })} style={styles.itemStyle}>
             <Animated.Image
                 source={imageUri}
                 style={[
@@ -87,6 +88,11 @@ const styles = StyleSheet.create({
         height: width * 1.2,
         resizeMode: 'contain',
         flex: 1,
+        elevation: 5, // Adjust the value to change the shadow depth
+        shadowColor: '#000000',
+        shadowOffset: { width: 5, height: 5 }, // Adjust the values to change the shadow offset
+        shadowOpacity: 0.5, // Adjust the value to change the shadow opacity
+        shadowRadius: 5,
     },
     textContainer: {
         alignItems: 'flex-start',

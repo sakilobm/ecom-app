@@ -3,44 +3,38 @@ import React from 'react';
 import { FontFamily } from "../../GlobalStyles";
 import { FontAwesome } from '@expo/vector-icons';
 import { BlurView } from 'expo-blur';
-const data = [
-    { key: 'Double Color', rate: '₹779.00', cateConClr: 'white', category: 'Coffee Cup', color: "#3F3F3F", image: require('../../assets/png/1.png') },
-    { key: 'Imaged Cup', rate: '₹679.00', cateConClr: 'white', category: 'Coffee Cup', color: "#2C9CBF", image: require('../../assets/png/2.png') },
-    { key: 'Dark Russel', rate: '₹679.00', cateConClr: 'white', category: 'Coffee Cup', color: "#B9944F", image: require('../../assets/png/3.png') },
-    { key: 'Leaf Design', rate: '₹999.00', cateConClr: '#454A4B', category: 'Coffee Cup', color: "#96B249", image: require('../../assets/png/4.png') },
-    { key: 'Plain red Cup', rate: '₹879.00', cateConClr: '#454A4B', category: 'Coffee Cup', color: "#FFC0BB", image: require('../../assets/png/5.png') },
-    { key: 'Deep Rever', rate: '₹779.00', cateConClr: '#454A4B', category: 'Coffee Cup', color: "#DDCDFE", image: require('../../assets/png/6.png') },
-];
-const Card = () => {
+import data from '../MugData'
+
+const Card = ({ navigation }) => {
 
     return (
         <>
             <View style={styles.Container} >
                 <Text style={styles.subTitleBoldy}>Mugs<Text style={styles.subTitle}> Collections </Text></Text>
                 <TouchableOpacity>
-                    <FontAwesome name="long-arrow-right" size={34} color="black" />
+                    <FontAwesome onPress={() => navigation.navigate('Search')} name="long-arrow-right" size={34} color="black" />
                 </TouchableOpacity>
             </View>
             <FlatList
                 data={data}
                 renderItem={({ item }) => (
-                    <View style={[styles.cardContainer, { overflow: 'hidden' }]} >
+                    <View style={styles.cardContainer} >
                         {/* TODO: Cards Rotation Animation : YT SAVE LIST NAME : OBM APP */}
                         <View style={[styles.card, { backgroundColor: item.color }]}>
-                            <BlurView intensity={250}
-                                style={styles.blurContainer} />
-                            {/* <View style={styles.blurContainer} /> */}
-                            <View style={[styles.cardImageContainer]}>
-                                <Image source={item.image} style={styles.cardImage} />
-                            </View>
-                            <View style={{ position: 'absolute', }} >
-                                <View style={styles.cardTextContainer}>
-                                    <Text style={styles.cardText}>{item.key}</Text>
+                            <BlurView intensity={250} style={styles.blurContainer} />
+                            <TouchableOpacity>
+                                <View style={{ position: 'absolute', zIndex: 3, }} >
+                                    <View style={styles.cardTextContainer}>
+                                        <Text style={styles.cardText}>{item.key}</Text>
+                                    </View>
+                                    <View style={[styles.categoryContainer, { backgroundColor: item.cateConClr }]} >
+                                        <Text style={[styles.category, { color: item.color }]} >{item.category}</Text>
+                                    </View>
                                 </View>
-                                <View style={[styles.categoryContainer, { backgroundColor: item.cateConClr }]} >
-                                    <Text style={[styles.category, { color: item.color }]} >{item.category}</Text>
+                                <View style={[styles.cardImageContainer]}>
+                                    <Image source={item.image} style={styles.cardImage} />
                                 </View>
-                            </View>
+                            </TouchableOpacity>
                             <BlurView
                                 intensity={150}
                                 style={styles.buyContainer}
@@ -64,8 +58,6 @@ const Card = () => {
 const styles = StyleSheet.create({
     FlatList: {
         marginTop: 10,
-
-        // backgroundColor: 'grey',
     },
     Container: {
         justifyContent: 'space-around',
@@ -86,6 +78,7 @@ const styles = StyleSheet.create({
         width: 324,
         height: 406,
         borderRadius: 50,
+        overflow: 'hidden'
     },
     blurContainer: {
         borderBottomRightRadius: 90,
@@ -120,9 +113,12 @@ const styles = StyleSheet.create({
         lineHeight: 40,
     },
     cardImage: {
-        top: -15,
+        // top: -15,
         width: 500,
         height: 500,
+    },
+    cardImageContainer: {
+        // overflow: 'hidden',
     },
     buyContainer: {
         position: 'absolute',
