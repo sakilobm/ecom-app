@@ -52,7 +52,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Container onLayout={onLayoutRootView}>
-        <Stack.Navigator initialRouteName="ProductFrame" screenOptions={{ headerShown: false, }}>
+        <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false, }}>
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Search" component={SearchingScreen} />
           <Stack.Screen name="Mug" component={ProductMugScreen} />

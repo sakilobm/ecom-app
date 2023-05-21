@@ -10,7 +10,7 @@ const HomeScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <HeaderBar />
-            <TabBarCategory />
+            <TabBarCategory navigation={navigation}/>
             <Card navigation={navigation}/>
             <BottomBarNavigation />
             {/* <CategoryBar /> */}
