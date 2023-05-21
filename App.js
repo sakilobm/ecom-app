@@ -17,6 +17,9 @@ import SecOnboardScreen from './Screens/OnboardingScreen/SecOnboardScreen';
 import TrdOnboardScreen from './Screens/OnboardingScreen/TrdOnboardScreen';
 import FouOnboardScreen from './Screens/OnboardingScreen/FouOnboardScreen';
 import FitOnboardScreen from './Screens/OnboardingScreen/FitOnboardScreen';
+import DotInversionScreen from './Screens/DotInvertionScreen';
+import ProductFrameScreen from './Screens/ProductFrameScreen';
+import ProductFrameDetailScreen from './Screens/ProductFrameDetailScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -49,7 +52,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Container onLayout={onLayoutRootView}>
-        <Stack.Navigator initialRouteName="WelcomeScreen" screenOptions={{ headerShown: false, }}>
+        <Stack.Navigator initialRouteName="ProductFrame" screenOptions={{ headerShown: false, }}>
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Search" component={SearchingScreen} />
           <Stack.Screen name="Mug" component={ProductMugScreen} />
@@ -60,6 +63,9 @@ export default function App() {
           <Stack.Screen name="TrdOnboard" component={TrdOnboardScreen} />
           <Stack.Screen name="FouOnboard" component={FouOnboardScreen} />
           <Stack.Screen name="FitOnboard" component={FitOnboardScreen} />
+          <Stack.Screen name="DotInversion" component={DotInversionScreen} />
+          <Stack.Screen name="ProductFrame" component={ProductFrameScreen} />
+          <Stack.Screen name="ProductFrameDetail" component={ProductFrameDetailScreen} />
         </Stack.Navigator>
         <StatusBar style="auto" />
         {/* <HomeScreen /> */}

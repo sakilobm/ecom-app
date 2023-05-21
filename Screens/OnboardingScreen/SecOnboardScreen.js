@@ -12,6 +12,7 @@ const SecOnboardScreen = ({ navigation }) => {
             <Text style={styles.skip}>Skip</Text>
             <View style={{ marginTop: width / 2.9, }}>
                 <SvgXml style={{ alignSelf: 'center', }} xml={PinkBubble} />
+                {/* TODO: Find Correct Animation In LottieFiles */}
                 <SvgXml style={{ alignSelf: 'center', position: 'absolute', marginTop: 40, }} xml={Photographer} width={298} height={199} />
             </View>
             <View style={{ marginTop: 35, marginLeft: 30, marginRight: -20, }}>
