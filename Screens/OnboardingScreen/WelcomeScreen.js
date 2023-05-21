@@ -19,7 +19,7 @@ const Welcome = ({ navigation }) => {
                 end={{ x: 1, y: 0 }} // Ending point at right
                 colors={["#2b8fe3", "#ea3690"]}
             >
-                <SvgXml xml={Wave} width={414} height={118} />
+                <SvgXml xml={Wave} />
                 <Text style={styles.welcomeTitle}>WELCOME</Text>
                 <View style={{ flex: .6, marginTop: 50, }}>
                     <LottieView

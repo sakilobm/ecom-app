@@ -10,14 +10,14 @@ const SecOnboardScreen = ({ navigation }) => {
     return (
         <View style={{ width: width, height: height, }}>
             <Text style={styles.skip}>Skip</Text>
-            <View style={{ marginTop: width / 3, }}>
+            <View style={{ marginTop: width / 2.9, }}>
                 <SvgXml style={{ alignSelf: 'center', }} xml={PinkBubble} />
                 <SvgXml style={{ alignSelf: 'center', position: 'absolute', marginTop: 40, }} xml={Photographer} width={298} height={199} />
             </View>
-            <View style={{ marginTop: 30, marginLeft: 25, marginRight: -20, }}>
+            <View style={{ marginTop: 35, marginLeft: 30, marginRight: -20, }}>
                 <Text style={styles.bigTitleTop}>Preserve your</Text>
                 <Text style={styles.bigTitleDown}>Memories</Text>
-                <Text style={styles.subTitle}>We make your photos to lovable memories with our products</Text>
+                <Text style={styles.subTitle}>We make your photos to lovable {'\n'}memories with our products</Text>
             </View>
             <SvgXml xml={StarDots} width={319.56} height={722.12} style={{ alignSelf: 'center', position: 'absolute', marginTop: 80, }} />
             <TouchableOpacity onPress={() => navigation.navigate('TrdOnboard')} style={styles.backBtn}>
@@ -70,13 +70,13 @@ const styles = StyleSheet.create({
     },
     subTitle: {
         marginTop: 5,
-        fontSize: 20,
+        fontSize: 18,
         color: 'black',
         fontFamily: 'Raleway-Bold',
     },
     backBtn: {
         position: 'absolute',
-        bottom: width / 3.5,
+        bottom: width / 3.3,
         alignSelf: 'center',
         shadowColor: 'rgba(0, 0, 0, 0.5)', // Shadow color
         shadowOpacity: 0.8, // Opacity of the shadow

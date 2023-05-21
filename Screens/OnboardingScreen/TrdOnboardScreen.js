@@ -14,10 +14,10 @@ const SecOnboardScreen = ({ navigation }) => {
                 <SvgXml style={{ alignSelf: 'center', }} xml={TrdBubble} />
                 <SvgXml style={{ alignSelf: 'center', position: 'absolute', }} xml={TrdSticker} />
             </View>
-            <View style={{ marginTop: 30, marginLeft: 25, marginRight: -20, }}>
+            <View style={{ marginTop: 50, marginLeft: 30, marginRight: -20, }}>
                 <Text style={styles.bigTitleTop}>Custom Your</Text>
                 <Text style={styles.bigTitleDown}>Creations</Text>
-                <Text style={styles.subTitle}>Get a personalized product with your own photos or designs</Text>
+                <Text style={styles.subTitle}>Get a personalized product with {'\n'}your own photos or designs</Text>
             </View>
             <SvgXml xml={TrdStar} width={319.56} height={722.12} style={{ alignSelf: 'center', position: 'absolute', marginTop: 80, }} />
             <TouchableOpacity onPress={() => navigation.navigate('FouOnboard')} style={styles.backBtn}>
@@ -70,13 +70,13 @@ const styles = StyleSheet.create({
     },
     subTitle: {
         marginTop: 5,
-        fontSize: 20,
+        fontSize: 18,
         color: '#1D4D0C',
         fontFamily: 'Raleway-Bold',
     },
     backBtn: {
         position: 'absolute',
-        bottom: width / 3.5,
+        bottom: width / 3.3,
         alignSelf: 'center',
         shadowColor: 'rgba(0, 0, 0, 0.5)', // Shadow color
         shadowOpacity: 0.8, // Opacity of the shadow

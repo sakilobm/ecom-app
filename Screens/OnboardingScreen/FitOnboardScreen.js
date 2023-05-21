@@ -10,14 +10,14 @@ const SecOnboardScreen = ({ navigation }) => {
     return (
         <View style={{ width: width, height: height, backgroundColor: '#5956E9', }}>
             <Text style={styles.skip}>Skip</Text>
-            <View style={{ marginTop: width / 3, }}>
+            <View style={{ marginTop: width / 2.7 , }}>
                 <SvgXml style={{ alignSelf: 'center', }} xml={FitBubble} />
                 <SvgXml style={{ alignSelf: 'center', position: 'absolute', }} xml={FitSticker} />
             </View>
-            <View style={{ marginTop: 30, marginLeft: 25, marginRight: -20, }}>
+            <View style={{ marginTop: 50, marginLeft: 30, marginRight: -20, }}>
                 <Text style={styles.bigTitleTop}>Photos to</Text>
                 <Text style={styles.bigTitleDown}>Memories</Text>
-                <Text style={styles.subTitle}>We make your photos to lovable memories with our products</Text>
+                <Text style={styles.subTitle}>We make your photos to lovable {'\n'}memories with our products</Text>
             </View>
             <SvgXml xml={TrdStar} width={319.56} height={722.12} style={{ alignSelf: 'center', position: 'absolute', marginTop: 80, }} />
             <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.backBtn}>
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     },
     subTitle: {
         marginTop: 5,
-        fontSize: 20,
+        fontSize: 18,
         color: '#240895',
         fontFamily: 'Raleway-Bold',
     },

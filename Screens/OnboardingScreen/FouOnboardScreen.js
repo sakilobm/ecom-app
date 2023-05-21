@@ -10,11 +10,11 @@ const SecOnboardScreen = ({ navigation }) => {
     return (
         <View style={{ width: width, height: height, backgroundColor: '#FF2E93', }}>
             <Text style={styles.skip}>Skip</Text>
-            <View style={{ marginTop: width / 3, }}>
+            <View style={{ marginTop: width / 2.7, }}>
                 <SvgXml style={{ alignSelf: 'center', }} xml={FouBubble} />
                 <SvgXml style={{ alignSelf: 'center', position: 'absolute', }} xml={FouSticker} />
             </View>
-            <View style={{ marginTop: 30, marginLeft: 25, marginRight: -20, }}>
+            <View style={{ marginTop: 50, marginLeft: 30, marginRight: -20, }}>
                 <Text style={styles.bigTitleTop}>Frame Your</Text>
                 <Text style={styles.bigTitleDown}>Memories</Text>
                 <Text style={styles.subTitle}>Frames are made from high-quality materials & lot of variety</Text>
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     },
     subTitle: {
         marginTop: 5,
-        fontSize: 20,
+        fontSize: 18,
         color: '#4D0C4A',
         fontFamily: 'Raleway-Bold',
     },
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
     },
     doodleDotsBottom: {
         position: 'absolute',
-        bottom: 0,
+        bottom: -1,
         left: -140,
     },
 })
