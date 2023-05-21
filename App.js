@@ -14,6 +14,9 @@ import AddToCartScreen from './Screens/AddToCartScreen';
 import ProductMugDetailsScreen from './Screens/ProductMugDetailsScreen';
 import WelcomeScreen from './Screens/OnboardingScreen/WelcomeScreen';
 import SecOnboardScreen from './Screens/OnboardingScreen/SecOnboardScreen';
+import TrdOnboardScreen from './Screens/OnboardingScreen/TrdOnboardScreen';
+import FouOnboardScreen from './Screens/OnboardingScreen/FouOnboardScreen';
+import FitOnboardScreen from './Screens/OnboardingScreen/FitOnboardScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -53,7 +56,10 @@ export default function App() {
           <Stack.Screen name="MugDetail" component={ProductMugDetailsScreen} />
           <Stack.Screen name="Cart" component={AddToCartScreen} />
           <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
-          <Stack.Screen name="SecOnboardScreen" component={SecOnboardScreen} />
+          <Stack.Screen name="SecOnboard" component={SecOnboardScreen} />
+          <Stack.Screen name="TrdOnboard" component={TrdOnboardScreen} />
+          <Stack.Screen name="FouOnboard" component={FouOnboardScreen} />
+          <Stack.Screen name="FitOnboard" component={FitOnboardScreen} />
         </Stack.Navigator>
         <StatusBar style="auto" />
         {/* <HomeScreen /> */}
