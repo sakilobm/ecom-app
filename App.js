@@ -21,6 +21,7 @@ import DotInversionScreen from './Screens/DotInvertionScreen';
 import ProductFrameScreen from './Screens/ProductFrameScreen';
 import ProductFrameDetailScreen from './Screens/ProductFrameDetailScreen';
 import BottomSheet from './Components/BottomSheet';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 const Stack = createNativeStackNavigator();
 
@@ -51,31 +52,33 @@ export default function App() {
   //Auto Font Loader -END
 
   return (
-    <NavigationContainer>
-      <Container onLayout={onLayoutRootView}>
-        <Stack.Navigator initialRouteName="BottomSheet" screenOptions={{ headerShown: false, }}>
-          <Stack.Screen name="Home" component={HomeScreen} />
-          <Stack.Screen name="Search" component={SearchingScreen} />
-          <Stack.Screen name="Mug" component={ProductMugScreen} />
-          <Stack.Screen name="MugDetail" component={ProductMugDetailsScreen} />
-          <Stack.Screen name="Cart" component={AddToCartScreen} />
-          <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
-          <Stack.Screen name="SecOnboard" component={SecOnboardScreen} />
-          <Stack.Screen name="TrdOnboard" component={TrdOnboardScreen} />
-          <Stack.Screen name="FouOnboard" component={FouOnboardScreen} />
-          <Stack.Screen name="FitOnboard" component={FitOnboardScreen} />
-          <Stack.Screen name="DotInversion" component={DotInversionScreen} />
-          <Stack.Screen name="ProductFrame" component={ProductFrameScreen} />
-          <Stack.Screen name="ProductFrameDetail" component={ProductFrameDetailScreen} />
-          <Stack.Screen name="BottomSheet" component={BottomSheet} />
-        </Stack.Navigator>
-        <StatusBar style="auto" />
-        {/* <HomeScreen /> */}
-        {/* <SearchingScreen /> */}
-        {/* <ProductMugScreen /> */}
-        {/* <AddToCartScreen /> */}
-      </Container>
-    </NavigationContainer>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <NavigationContainer>
+        <Container onLayout={onLayoutRootView}>
+          <Stack.Navigator initialRouteName="BottomSheet" screenOptions={{ headerShown: false, }}>
+            <Stack.Screen name="Home" component={HomeScreen} />
+            <Stack.Screen name="Search" component={SearchingScreen} />
+            <Stack.Screen name="Mug" component={ProductMugScreen} />
+            <Stack.Screen name="MugDetail" component={ProductMugDetailsScreen} />
+            <Stack.Screen name="Cart" component={AddToCartScreen} />
+            <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
+            <Stack.Screen name="SecOnboard" component={SecOnboardScreen} />
+            <Stack.Screen name="TrdOnboard" component={TrdOnboardScreen} />
+            <Stack.Screen name="FouOnboard" component={FouOnboardScreen} />
+            <Stack.Screen name="FitOnboard" component={FitOnboardScreen} />
+            <Stack.Screen name="DotInversion" component={DotInversionScreen} />
+            <Stack.Screen name="ProductFrame" component={ProductFrameScreen} />
+            <Stack.Screen name="ProductFrameDetail" component={ProductFrameDetailScreen} />
+            <Stack.Screen name="BottomSheet" component={BottomSheet} />
+          </Stack.Navigator>
+          <StatusBar style="auto" />
+          {/* <HomeScreen /> */}
+          {/* <SearchingScreen /> */}
+          {/* <ProductMugScreen /> */}
+          {/* <AddToCartScreen /> */}
+        </Container>
+      </NavigationContainer>
+    </GestureHandlerRootView>
   );
 }
 
