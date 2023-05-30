@@ -20,6 +20,18 @@ const BottomSheet = () => {
         onStart: () => {
             context.value = { y: translateY.value };
         },
+        onActive: (event) => {
+            translateY.value = context.value.y + event.translationY;
+            translateY.value = Math.max(translateY.value, -SCREEN_HEIGHT);
+            translateY.value = Math.min(translateY.value, 0);
+        },
+        onEnd: (event) => {
+            if (event.translationY < -100) {
+                translateY.value = withSpring(-SCREEN_HEIGHT / 3);
+            } else {
+                translateY.value = withSpring(0);
+            }
+        },
         onUpdate: (event) => {
             translateY.value = event.translationY + context.value.y;
             translateY.value = Math.max(translateY.value, -SCREEN_HEIGHT);
