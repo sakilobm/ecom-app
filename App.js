@@ -20,6 +20,7 @@ import FitOnboardScreen from './Screens/OnboardingScreen/FitOnboardScreen';
 import DotInversionScreen from './Screens/DotInvertionScreen';
 import ProductFrameScreen from './Screens/ProductFrameScreen';
 import ProductFrameDetailScreen from './Screens/ProductFrameDetailScreen';
+import BottomSheet from './Components/BottomSheet';
 
 const Stack = createNativeStackNavigator();
 
@@ -52,7 +53,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Container onLayout={onLayoutRootView}>
-        <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false, }}>
+        <Stack.Navigator initialRouteName="BottomSheet" screenOptions={{ headerShown: false, }}>
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Search" component={SearchingScreen} />
           <Stack.Screen name="Mug" component={ProductMugScreen} />
@@ -66,6 +67,7 @@ export default function App() {
           <Stack.Screen name="DotInversion" component={DotInversionScreen} />
           <Stack.Screen name="ProductFrame" component={ProductFrameScreen} />
           <Stack.Screen name="ProductFrameDetail" component={ProductFrameDetailScreen} />
+          <Stack.Screen name="BottomSheet" component={BottomSheet} />
         </Stack.Navigator>
         <StatusBar style="auto" />
         {/* <HomeScreen /> */}

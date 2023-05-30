@@ -1,6 +1,7 @@
 import { Text, View, StyleSheet, TouchableOpacity, Image, ImageBackground } from 'react-native'
 import React from 'react'
 import Svg, { Path, Rect, Ellipse, Defs, Pattern, Use, SvgXml } from 'react-native-svg';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 const BottomBarNavigation = () => {
     const svgXml = `<svg width="405" height="113" viewBox="8 0 405 113" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -9,7 +10,7 @@ const BottomBarNavigation = () => {
     </svg>    
     `
     return (
-        <>
+        <View style={styles.container}>
             <SvgXml style={styles.svgCon} xml={svgXml} throwIfNamespace={false} />
             <View style={styles.bottomBar} >
                 <TouchableOpacity style={styles.circleContainer}>
@@ -23,10 +24,13 @@ const BottomBarNavigation = () => {
                     <Image style={styles.cartImage} source={require('../assets/png/cartImage.png')} />
                 </TouchableOpacity>
             </View>
-        </>
+        </View>
     )
 }
 const styles = StyleSheet.create({
+    container: {
+        width: wp('100%'),
+    },
     svgCon: {
         position: 'absolute',
         bottom: 0,
