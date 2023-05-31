@@ -22,7 +22,7 @@ const Card = ({ navigation }) => {
                         {/* TODO: Cards Rotation Animation : YT SAVE LIST NAME : OBM APP */}
                         <View style={[styles.card, { backgroundColor: item.color }]}>
                             <BlurView intensity={250} style={styles.blurContainer} />
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={()=>navigation.navigate('Mug')}>
                                 <View style={{ position: 'absolute', zIndex: 3, }} >
                                     <View style={styles.cardTextContainer}>
                                         <Text style={styles.cardText}>{item.key}</Text>

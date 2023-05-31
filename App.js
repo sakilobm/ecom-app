@@ -55,7 +55,7 @@ export default function App() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <NavigationContainer>
         <Container onLayout={onLayoutRootView}>
-          <Stack.Navigator initialRouteName="BottomSheet" screenOptions={{ headerShown: false, }}>
+          <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false, }}>
             <Stack.Screen name="Home" component={HomeScreen} />
             <Stack.Screen name="Search" component={SearchingScreen} />
             <Stack.Screen name="Mug" component={ProductMugScreen} />

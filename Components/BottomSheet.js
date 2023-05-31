@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect } from 'react';
-import { View, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
+import { View, StyleSheet, Dimensions } from 'react-native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
-import { Gesture, GestureDetector, PanGestureHandler } from 'react-native-gesture-handler';
+import { Gesture, GestureDetector, } from 'react-native-gesture-handler';
 import Animated, {
     useSharedValue,
     useAnimatedGestureHandler,
@@ -11,11 +11,13 @@ import Animated, {
     interpolate,
     Extrapolate,
 } from 'react-native-reanimated';
+import BottomBarNavigation from './BottomBarNavigation';
 
 const { height: SCREEN_HEIGHT } = Dimensions.get('window');
-const MAX_TRANSLATE_Y = -SCREEN_HEIGHT + 50;
+// this one for - Container Top End Value
+const MAX_TRANSLATE_Y = -SCREEN_HEIGHT + 80;
 const BottomSheet = () => {
-    const translateY = useSharedValue(0);
+    const translateY = useSharedValue(40);
     const context = useSharedValue({ y: 0 });
 
     const scrollTo = useCallback((destination) => {
@@ -42,14 +44,14 @@ const BottomSheet = () => {
         })
 
     useEffect(() => {
-        scrollTo(-SCREEN_HEIGHT / 3)
+        scrollTo(-SCREEN_HEIGHT / 45)
     }, []);
 
     const animatedStyle = useAnimatedStyle(() => {
         const borderRadius = interpolate(
             translateY.value,
             [MAX_TRANSLATE_Y + 50, MAX_TRANSLATE_Y],
-            [25, 5],
+            [45, 5],
             Extrapolate.CLAMP)
         return {
             borderRadius,
@@ -58,17 +60,10 @@ const BottomSheet = () => {
     });
 
     return (
-        <View style={{ flex: 1, backgroundColor: 'black' }}>
-            <TouchableOpacity style={styles.sheetOpener} />
-
-            {/* <PanGestureHandler onGestureEvent={onGesture}>
-                <Animated.View style={[styles.container, animatedStyle]}>
-                    <View style={styles.line} />
-                </Animated.View>
-            </PanGestureHandler> */}
+        <View>
             <GestureDetector gesture={gesture}>
                 <Animated.View style={[styles.container, animatedStyle]}>
-                    <View style={styles.line} />
+                    <BottomBarNavigation />
                 </Animated.View>
             </GestureDetector>
         </View>
@@ -76,26 +71,19 @@ const BottomSheet = () => {
 };
 
 const styles = StyleSheet.create({
-    sheetOpener: {
-        height: 50,
-        width: 50,
-        backgroundColor: 'white',
-        borderRadius: 45,
-        alignSelf: 'center',
-        top: hp('50%'),
-    },
     container: {
         width: '100%',
-        height: SCREEN_HEIGHT,
-        backgroundColor: 'white',
+        height: SCREEN_HEIGHT + 50,
+        backgroundColor: '#1A1A1A',
         borderRadius: 30,
         position: 'absolute',
         top: SCREEN_HEIGHT,
+        zIndex: 1,
     },
     line: {
         width: wp('20%'),
         height: hp('.5%'),
-        backgroundColor: 'black',
+        backgroundColor: 'white',
         borderRadius: 25,
         alignSelf: 'center',
         marginVertical: hp('2%'),
